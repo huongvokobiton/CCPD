@@ -283,6 +283,6 @@ for i, (XI, ims) in enumerate(trainloader):
     cv2.rectangle(img, (int(left_up[0]), int(left_up[1])), (int(right_down[0]), int(right_down[1])), (0, 0, 255), 2)
     #   The first character is Chinese character, can not be printed normally, thus is omitted.
     lpn = alphabets[labelPred[1]] + ads[labelPred[2]] + ads[labelPred[3]] + ads[labelPred[4]] + ads[labelPred[5]] + ads[labelPred[6]]
-    cv2.putText(img, lpn, (int(left_up[0]), int(left_up[1])-20), cv2.FONT_ITALIC, 2, (0, 0, 255))
-    cv2.imwrite(ims[0], img)
+    cv2.putText(img, lpn, (int(left_up[0]), int(left_up[1])-20), cv2.FONT_ITALIC, 2, (0, 0, 255),2)
+    cv2.imwrite(ims[0].replace('demo/',''),img)
 
